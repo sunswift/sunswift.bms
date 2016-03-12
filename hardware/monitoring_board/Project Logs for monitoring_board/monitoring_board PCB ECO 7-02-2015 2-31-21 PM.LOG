@@ -1,0 +1,19 @@
+Added Component: Designator=J1(8P8C-1PORT)
+Added Component: Designator=J2(8P8C-1PORT)
+Added Pin To Net: NetName=NetF1_2 Pin=J1-1
+Added Pin To Net: NetName=NetD13_1 Pin=J1-2
+Added Pin To Net: NetName=NetD14_1 Pin=J1-3
+Added Pin To Net: NetName=NetF1_2 Pin=J1-4
+Added Pin To Net: NetName=NetD15_1 Pin=J1-6
+Added Pin To Net: NetName=NetF1_2 Pin=J1-7
+Added Pin To Net: NetName=NetF1_2 Pin=J1-8
+Added Pin To Net: NetName=V-_FILTERED Pin=J2-1
+Added Pin To Net: NetName=NetJ2_2 Pin=J2-2
+Added Pin To Net: NetName=NetJ2_3 Pin=J2-3
+Added Pin To Net: NetName=V-_FILTERED Pin=J2-4
+Added Pin To Net: NetName=NetJ2_5 Pin=J2-5
+Added Pin To Net: NetName=NetJ2_6 Pin=J2-6
+Added Pin To Net: NetName=V-_FILTERED Pin=J2-7
+Added Pin To Net: NetName=V-_FILTERED Pin=J2-8
+Added Member To Class: ClassName=monitoring_board Member=Component J1 8P8C-1PORT
+Added Member To Class: ClassName=monitoring_board Member=Component J2 8P8C-1PORT

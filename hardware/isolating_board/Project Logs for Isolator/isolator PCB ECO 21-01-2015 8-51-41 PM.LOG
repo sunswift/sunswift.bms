@@ -1,0 +1,5 @@
+Added Component: Designator=R6(0603)
+Added Pin To Net: NetName=ONEWIRE_DATA Pin=R6-1
+Added Pin To Net: NetName=ISO3V3 Pin=R6-2
+Added Member To Class: ClassName=Isolator Member=Component R5 R
+Added Member To Class: ClassName=Isolator Member=Component R6 4.7k

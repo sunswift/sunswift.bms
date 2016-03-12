@@ -1,0 +1,21 @@
+Field=Comment~String~Comment~125|Field=Description~String~Description~125|Field=Designator~String~Designator~305|Field=Footprint~String~Footprint~65|Field=LibRef~String~LibRef~65|Field=Quantity~Integer~Quantity~65|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~monitoring_board.PrjPCB|ReportField=ProjectFullPath~C:\Users\Wind\Documents\sunswift.bms\hardware\monitoring_board\monitoring_board.PrjPCB|ReportField=Title~Bill of Materials For PCB Document [monitoring_board.PcbDoc]|ReportField=TotalQuantity~71|ReportField=ReportTime~1:41:28 PM|ReportField=ReportDate~14/03/2015|ReportField=ReportDateTime~14/03/2015 1:41:28 PM|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=DataSourceFileName~monitoring_board.PcbDoc|ReportField=DataSourceFullPath~C:\Users\Wind\Documents\sunswift.bms\hardware\monitoring_board\monitoring_board.PcbDoc
+3.3uF 100V|Capacitor|C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C16|1206|CAP|13
+1uF 10V|Capacitor|C13, C14|0603|CAP|2
+100nF 100V|Capacitor|C15|1206|CAP|1
+62V Zener|SMBJ64CABCT-ND|D1|DO-214AA|D Schottky|1
+PDZ7.5B|Zener Diode|D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12|SOD323|ZENER1|11
+D Schottky|Schottky Diode|D13, D14, D15|SMB|D Schottky|3
+SATA_FUSE|Fuse|F1|RESC3225M_1210I|FUSE|1
+SATA_FUSE|Fuse|F2|LITTELFUSE-154|FUSE|1
+8P8C-1PORT||J1, J2|8P8C-1PORT|8P8C-1PORT|2
+BLM31PG330SN1L|BLM31PG330SN1L|L1|1206|INDUCTOR|1
+Header 3|Header, 3-Pin|P2, P3|HDR1X3|Header 3|2
+Header 15X2|Header, 15-Pin, Dual row|P5|HDR2X15|Header 15X2|1
+Header 2|Header, 2-Pin|P6, P7, P8|HDR1X2|Header 2|3
+Header 4X2|Header, 4-Pin, Dual row|P9|HDR2X4|Header 4X2|1
+4.7k|Resistor|R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12|1206|RES1|12
+1M|Resistor|R13, R13A, R14, R15|0603|RES1|4
+100R|Resistor|R16, R17|1206|RES1|2
+100r|Resistor|R18, R19, R20, R21, R22, R23, R24|0603|RES1|7
+200k|Resistor|R25, R26|0603|RES1|2
+LTC6803-3||U1|SOP44|LTC6803-3|1

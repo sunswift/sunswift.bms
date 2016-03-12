@@ -1,0 +1,179 @@
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J3-1
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J3-1
+Removed Pin From Net: NetName=NetJ2_3 Pin=J3-2
+Removed Pin From Net: NetName=NetJ2_3 Pin=J3-2
+Removed Pin From Net: NetName=NetJ2_4 Pin=J4-1
+Removed Pin From Net: NetName=NetJ2_4 Pin=J4-1
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J4-2
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J4-2
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J5-1
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J5-1
+Removed Pin From Net: NetName=NetJ2_5 Pin=J5-2
+Removed Pin From Net: NetName=NetJ2_5 Pin=J5-2
+Removed Pin From Net: NetName=NetJ2_6 Pin=J6-1
+Removed Pin From Net: NetName=NetJ2_6 Pin=J6-1
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J6-2
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J6-2
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J7-1
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J7-1
+Removed Pin From Net: NetName=NetJ2_7 Pin=J7-2
+Removed Pin From Net: NetName=NetJ2_7 Pin=J7-2
+Removed Pin From Net: NetName=NetJ2_8 Pin=J8-1
+Removed Pin From Net: NetName=NetJ2_8 Pin=J8-1
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J8-2
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J8-2
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J9-1
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J9-1
+Removed Pin From Net: NetName=NetJ2_9 Pin=J9-2
+Removed Pin From Net: NetName=NetJ2_9 Pin=J9-2
+Removed Pin From Net: NetName=NetJ2_10 Pin=J10-1
+Removed Pin From Net: NetName=NetJ2_10 Pin=J10-1
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J10-2
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J10-2
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J12-1
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J12-1
+Removed Pin From Net: NetName=NetJ2_11 Pin=J12-2
+Removed Pin From Net: NetName=NetJ2_11 Pin=J12-2
+Removed Pin From Net: NetName=NetJ2_12 Pin=J13-1
+Removed Pin From Net: NetName=NetJ2_12 Pin=J13-1
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J13-2
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J13-2
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J16-1
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J16-1
+Removed Pin From Net: NetName=NetJ2_13 Pin=J16-2
+Removed Pin From Net: NetName=NetJ2_13 Pin=J16-2
+Removed Pin From Net: NetName=NetJ2_14 Pin=J17-1
+Removed Pin From Net: NetName=NetJ2_14 Pin=J17-1
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J17-2
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J17-2
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J18-1
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J18-1
+Removed Pin From Net: NetName=NetJ2_15 Pin=J18-2
+Removed Pin From Net: NetName=NetJ2_15 Pin=J18-2
+Removed Pin From Net: NetName=NetJ2_16 Pin=J19-1
+Removed Pin From Net: NetName=NetJ2_16 Pin=J19-1
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J19-2
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J19-2
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J21-1
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J21-1
+Removed Pin From Net: NetName=NetJ2_17 Pin=J21-2
+Removed Pin From Net: NetName=NetJ2_17 Pin=J21-2
+Removed Pin From Net: NetName=NetJ2_18 Pin=J22-1
+Removed Pin From Net: NetName=NetJ2_18 Pin=J22-1
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J22-2
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J22-2
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J23-1
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J23-1
+Removed Pin From Net: NetName=NetJ2_19 Pin=J23-2
+Removed Pin From Net: NetName=NetJ2_19 Pin=J23-2
+Removed Pin From Net: NetName=NetJ2_20 Pin=J24-1
+Removed Pin From Net: NetName=NetJ2_20 Pin=J24-1
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J24-2
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J24-2
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J25-1
+Removed Pin From Net: NetName=DISCHARGE_REMOTE Pin=J25-1
+Removed Pin From Net: NetName=NetJ2_21 Pin=J25-2
+Removed Pin From Net: NetName=NetJ2_21 Pin=J25-2
+Removed Pin From Net: NetName=NetJ2_22 Pin=J26-1
+Removed Pin From Net: NetName=NetJ2_22 Pin=J26-1
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J26-2
+Removed Pin From Net: NetName=MEASURE_REMOTE Pin=J26-2
+Removed Member From Class: ClassName=module_board Member=J3
+Removed Member From Class: ClassName=module_board Member=J4
+Removed Member From Class: ClassName=module_board Member=J5
+Removed Member From Class: ClassName=module_board Member=J6
+Removed Member From Class: ClassName=module_board Member=J7
+Removed Member From Class: ClassName=module_board Member=J8
+Removed Member From Class: ClassName=module_board Member=J9
+Removed Member From Class: ClassName=module_board Member=J10
+Removed Member From Class: ClassName=module_board Member=J12
+Removed Member From Class: ClassName=module_board Member=J13
+Removed Member From Class: ClassName=module_board Member=J16
+Removed Member From Class: ClassName=module_board Member=J17
+Removed Member From Class: ClassName=module_board Member=J18
+Removed Member From Class: ClassName=module_board Member=J19
+Removed Member From Class: ClassName=module_board Member=J21
+Removed Member From Class: ClassName=module_board Member=J22
+Removed Member From Class: ClassName=module_board Member=J23
+Removed Member From Class: ClassName=module_board Member=J24
+Removed Member From Class: ClassName=module_board Member=J26
+Added Component: Designator=R14(0603)
+Added Component: Designator=R15(0603)
+Added Component: Designator=R16(0603)
+Added Component: Designator=R17(0603)
+Added Component: Designator=R18(0603)
+Added Component: Designator=R19(0603)
+Added Component: Designator=R20(0603)
+Added Component: Designator=R21(0603)
+Added Component: Designator=R22(0603)
+Added Component: Designator=R23(0603)
+Added Component: Designator=R24(0603)
+Added Component: Designator=R25(0603)
+Added Component: Designator=R26(0603)
+Added Component: Designator=R27(0603)
+Added Component: Designator=R28(0603)
+Added Component: Designator=R29(0603)
+Added Component: Designator=R30(0603)
+Added Component: Designator=R31(0603)
+Added Component: Designator=R32(0603)
+Added Component: Designator=R33(0603)
+Added Pin To Net: NetName=NetJ2_3 Pin=R14-1
+Added Pin To Net: NetName=DISCHARGE_REMOTE Pin=R14-2
+Added Pin To Net: NetName=MEASURE_REMOTE Pin=R15-1
+Added Pin To Net: NetName=NetJ2_4 Pin=R15-2
+Added Pin To Net: NetName=NetJ2_5 Pin=R16-1
+Added Pin To Net: NetName=DISCHARGE_REMOTE Pin=R16-2
+Added Pin To Net: NetName=MEASURE_REMOTE Pin=R17-1
+Added Pin To Net: NetName=NetJ2_6 Pin=R17-2
+Added Pin To Net: NetName=NetJ2_7 Pin=R18-1
+Added Pin To Net: NetName=DISCHARGE_REMOTE Pin=R18-2
+Added Pin To Net: NetName=MEASURE_REMOTE Pin=R19-1
+Added Pin To Net: NetName=NetJ2_8 Pin=R19-2
+Added Pin To Net: NetName=NetJ2_9 Pin=R20-1
+Added Pin To Net: NetName=DISCHARGE_REMOTE Pin=R20-2
+Added Pin To Net: NetName=MEASURE_REMOTE Pin=R21-1
+Added Pin To Net: NetName=NetJ2_10 Pin=R21-2
+Added Pin To Net: NetName=NetJ2_11 Pin=R22-1
+Added Pin To Net: NetName=DISCHARGE_REMOTE Pin=R22-2
+Added Pin To Net: NetName=MEASURE_REMOTE Pin=R23-1
+Added Pin To Net: NetName=NetJ2_12 Pin=R23-2
+Added Pin To Net: NetName=NetJ2_13 Pin=R24-1
+Added Pin To Net: NetName=DISCHARGE_REMOTE Pin=R24-2
+Added Pin To Net: NetName=MEASURE_REMOTE Pin=R25-1
+Added Pin To Net: NetName=NetJ2_14 Pin=R25-2
+Added Pin To Net: NetName=NetJ2_15 Pin=R26-1
+Added Pin To Net: NetName=DISCHARGE_REMOTE Pin=R26-2
+Added Pin To Net: NetName=MEASURE_REMOTE Pin=R27-1
+Added Pin To Net: NetName=NetJ2_16 Pin=R27-2
+Added Pin To Net: NetName=NetJ2_17 Pin=R28-1
+Added Pin To Net: NetName=DISCHARGE_REMOTE Pin=R28-2
+Added Pin To Net: NetName=MEASURE_REMOTE Pin=R29-1
+Added Pin To Net: NetName=NetJ2_18 Pin=R29-2
+Added Pin To Net: NetName=NetJ2_19 Pin=R30-1
+Added Pin To Net: NetName=DISCHARGE_REMOTE Pin=R30-2
+Added Pin To Net: NetName=MEASURE_REMOTE Pin=R31-1
+Added Pin To Net: NetName=NetJ2_20 Pin=R31-2
+Added Pin To Net: NetName=NetJ2_21 Pin=R32-1
+Added Pin To Net: NetName=DISCHARGE_REMOTE Pin=R32-2
+Added Pin To Net: NetName=MEASURE_REMOTE Pin=R33-1
+Added Pin To Net: NetName=NetJ2_22 Pin=R33-2
+Added Member To Class: ClassName=module_board Member=Component R14 0k
+Added Member To Class: ClassName=module_board Member=Component R15 0k
+Added Member To Class: ClassName=module_board Member=Component R16 0k
+Added Member To Class: ClassName=module_board Member=Component R17 0k
+Added Member To Class: ClassName=module_board Member=Component R18 0k
+Added Member To Class: ClassName=module_board Member=Component R19 0k
+Added Member To Class: ClassName=module_board Member=Component R20 0k
+Added Member To Class: ClassName=module_board Member=Component R21 0k
+Added Member To Class: ClassName=module_board Member=Component R22 0k
+Added Member To Class: ClassName=module_board Member=Component R23 0k
+Added Member To Class: ClassName=module_board Member=Component R24 0k
+Added Member To Class: ClassName=module_board Member=Component R25 0k
+Added Member To Class: ClassName=module_board Member=Component R26 0k
+Added Member To Class: ClassName=module_board Member=Component R27 0k
+Added Member To Class: ClassName=module_board Member=Component R28 0k
+Added Member To Class: ClassName=module_board Member=Component R29 0k
+Added Member To Class: ClassName=module_board Member=Component R30 0k
+Added Member To Class: ClassName=module_board Member=Component R31 0k
+Added Member To Class: ClassName=module_board Member=Component R32 0k
+Added Member To Class: ClassName=module_board Member=Component R33 0k

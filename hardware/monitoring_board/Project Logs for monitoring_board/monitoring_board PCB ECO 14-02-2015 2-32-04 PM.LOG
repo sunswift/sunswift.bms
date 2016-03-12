@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=V-_FILTERED Pin=D1-1
+Removed Pin From Net: NetName=V-_FILTERED Pin=J2-1
+Removed Pin From Net: NetName=V-_FILTERED Pin=J2-4
+Removed Pin From Net: NetName=V-_FILTERED Pin=J2-7
+Removed Pin From Net: NetName=V-_FILTERED Pin=J2-8
+Removed Pin From Net: NetName=V-_FILTERED Pin=P5-4
+Removed Pin From Net: NetName=V-_FILTERED Pin=P8-1
+Removed Pin From Net: NetName=V-_FILTERED Pin=P8-2
+Removed Pin From Net: NetName=V-_FILTERED Pin=R17-1
+Change Net Name : Old Net Name=SHORT1 New Net Name=V+_UNFILTERED
+Change Net Name : Old Net Name=SHORT2 New Net Name=V+_FILTERED
+Added Pin To Net: NetName=V-_UNFILTERED Pin=D1-1
+Added Pin To Net: NetName=V-_UNFILTERED Pin=J2-1
+Added Pin To Net: NetName=V-_UNFILTERED Pin=J2-4
+Added Pin To Net: NetName=V-_UNFILTERED Pin=J2-7
+Added Pin To Net: NetName=V-_UNFILTERED Pin=J2-8
+Added Pin To Net: NetName=V-_UNFILTERED Pin=P5-4
+Added Pin To Net: NetName=V-_UNFILTERED Pin=R17-1
+Added Net: Name=V-_UNFILTERED
+Added Pin To Net: NetName=V- FILTERED Pin=P8-2
+Added Net: Name=V- FILTERED
+Added Pin To Net: NetName=V- UNFILTERED Pin=P8-1
+Added Net: Name=V- UNFILTERED

@@ -1,0 +1,133 @@
+.PHONY: all program
+
+LINKER = $(ARCH)/linker
+CMSIS = $(ARCH)/cmsis
+STARTUP = $(ARCH)/startup
+START_PROGRAMMER = $(UTILS)/dfu-util
+FLASH_CHIP = crt_emu_lpc11_13_nxp
+CHECKSUM = checksum
+
+# architecture
+MCU = cortex-m0
+UC = LPC11C14/301
+
+# define utilities
+CC = arm-none-eabi-gcc
+AS = arm-none-eabi-as
+LD = arm-none-eabi-ld
+SIZE = arm-none-eabi-size
+OBJCOPY = arm-none-eabi-objcopy
+
+LINKSCRIPT=lpc1114_flash_can_crp.ld
+STARTUPSCRIPT = cr_startup_lpc11
+
+OBJECTS += core_cm0.o system_LPC11xx.o
+OBJECTS += i2c.o ssp.o
+OBJECTS += $(STARTUPSCRIPT).o
+
+CFLAGS += -mcpu=$(MCU) -D__NEWLIB__ -D__USE_CMSIS -D__CODE_RED -mthumb
+CFLAGS += -lm
+
+LSCRIPT = $(LINKER)/$(LINKSCRIPT)
+LDFLAGS  = -nostdlib  -Xlinker -Map=$(BUILD)/main.map -Xlinker --gc-sections -L $(LINKER) -T "$(LSCRIPT)"
+
+DEV_ADDRESS = $(shell ../utilities/findPort.py $(PROJECT_NAME))
+
+all: $(BUILD)/main.axf $(BUILD)/main.bin
+
+$(BUILD)/main.axf: $(addprefix $(BUILD)/,$(OBJECTS))
+	@echo "[LINK] main.axf"
+	@$(CC) $(CFLAGS) $(LDFLAGS) $(addprefix $(BUILD)/,$(OBJECTS)) -o $(BUILD)/main.axf 
+
+$(BUILD)/core_cm0.o: $(CMSIS)/core_cm0.c
+	@echo "[CC] $@"
+	@$(CC) $(CFLAGS) -c -o $@ $<
+
+$(BUILD)/$(STARTUPSCRIPT).o: $(STARTUP)/$(STARTUPSCRIPT).c
+	@echo "[CC] $@"
+	@$(CC) $(CFLAGS) -c -o $@ $<
+
+$(BUILD)/main.bin: $(BUILD)/main.axf
+	@echo "[SIZE] main.axf"
+	@$(SIZE) $<
+	@echo "[GEN] main.bin"
+	@$(OBJCOPY) -O binary $< $@
+	@echo "[CHECKSUM] main.bin"
+	@echo -ne "   "
+	@$(CHECKSUM) -p $(UC) -d $@
+	@echo
+
+program: $(BUILD)/main.axf
+	@echo "[PROGRAM] main.axf               this is what gets flashed to the target"
+	@echo "[PROGRAM]  checking for programmer...";
+	@-lsusb | grep -q "df55"; \
+	if [ $$? -eq 0 ]; then \
+		echo "[PROGRAM]   detected LPC Expresso"; \
+		if [ -x "$(START_PROGRAMMER)" ]; then \
+			sudo $(START_PROGRAMMER) -d 0x471:0xdf55 -c 0 -t 2048 -R -D $(UTILS)/LPCXpressoWIN.enc > /dev/null 2>&1; \
+			if [ $$? -ne 0 ]; then \
+				echo -e "$(RED)[PROGRAM]    dfu-util failed to change programmer mode!$(NORMAL)"; \
+			else \
+				echo -e "$(RED)[PROGRAM]    Successfully changed LPCXpresso into correct mode.$(NORMAL)"; \
+				echo -e "$(YELLOW)[PROGRAM]    If in VMware Fusion, you may need to reattach the CodeRed device...$(NORMAL)"; \
+			fi; \
+		else \
+			echo -e "$(RED)[PROGRAM]    dfu-util doesn't exist in path!$(NORMAL)"; \
+		fi; \
+		sleep 1; \
+	else \
+		lsusb | grep -q "1fc9:0009"; \
+		if [ $$? -ne 0 ]; then \
+			echo -e "$(RED)[PROGRAM]    No programmer detected!$(NORMAL)"; \
+		fi; \
+	fi
+	@lsusb | grep -q "1fc9:0009"; \
+	if [ $$? -eq 0 ]; then \
+		echo -e "$(RED)[PROGRAM]   detected LPC Expresso in correct mode, attempting program$(NORMAL)"; \
+		$(FLASH_CHIP) -wire=winusb -p$(UC) -flash-load-exec=$(BUILD)/main.axf > /tmp/flash.out 2>&1; \
+		if [ $$? -ne 0 ]; then \
+			echo -e "$(RED)[PROGRAM]   FAILED!$(NORMAL)"; \
+			cat /tmp/flash.out; \
+		else \
+			rm /tmp/flash.out; \
+		fi; \
+	fi
+
+#program using .bin, doesn't seem to work atm
+#sudo $(FLASH_CHIP) -wire=winusb -p$(UC) -flash-load=$(BUILD)/main.bin -load-base=0x0000
+init:
+	@echo "Initialising FT232R"
+	@sudo ../utilities/ft232r_prog --manufacturer Sunswift --product $(PROJECT_NAME)
+	@echo "Please ensure RTS and DTR are NOT inverted, run 'make invert' to invert"
+		
+init64:
+	@echo "Initialising FT232R"
+	@sudo ../utilities/ft232r_prog_64 --manufacturer Sunswift --product $(PROJECT_NAME)
+	@echo "Please ensure RTS and DTR are NOT inverted, run 'make invert64' to invert"
+    
+invert:
+	@echo "Inverting FT232R control lines"
+	@sudo ../utilities/ft232r_prog --invert_rts --invert_dtr
+	@echo "Please ensure RTS and DTR are inverted, then disconnect and re-connect the device"
+    
+invert64:
+	@echo "Inverting FT232R control lines"
+	@sudo ../utilities/ft232r_prog_64 --invert_rts --invert_dtr
+	@echo "Please ensure RTS and DTR are inverted, then disconnect and re-connect the device"
+	
+uart: #Open a terminal without restarting micro
+	@echo starting up serial terminal without restarting
+	@echo try *make uartc* if you see nothing
+	@sudo ../utilities/lpc21isp -bin build/main.bin -termonly $(DEV_ADDRESS) 115200 12000
+	
+uartc: #Restart micro and open a terminal
+	@echo starting up serial terminal with restart
+	@sudo ../utilities/lpc21isp -bin build/main.bin -control -termonly $(DEV_ADDRESS) 115200 12000
+
+debug: build/main.bin #Flash and open uart terminal
+	@echo attempting program $(PROJECT_NAME) at $(DEV_ADDRESS) using the UART bootloader
+	@sudo ../utilities/lpc21isp -bin build/main.bin -verify -control -term $(DEV_ADDRESS) 115200 12000
+
+flash: build/main.bin #Flash without opening a terminal
+	@echo attempting program $(PROJECT_NAME) at $(DEV_ADDRESS) using the UART bootloader
+	@sudo ../utilities/lpc21isp -bin build/main.bin -verify -control $(DEV_ADDRESS) 115200 12000

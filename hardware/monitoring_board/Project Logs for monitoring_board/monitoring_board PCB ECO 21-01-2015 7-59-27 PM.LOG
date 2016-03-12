@@ -1,0 +1,44 @@
+Added Component: Designator=D2(SOD323)
+Added Component: Designator=D3(SOD323)
+Added Component: Designator=D4(SOD323)
+Added Component: Designator=D5(SOD323)
+Added Component: Designator=D6(SOD323)
+Added Component: Designator=D7(SOD323)
+Added Component: Designator=D8(SOD323)
+Added Component: Designator=D9(SOD323)
+Added Component: Designator=D10(SOD323)
+Added Component: Designator=D11(SOD323)
+Added Component: Designator=D12(SOD323)
+Added Pin To Net: NetName=C_1F Pin=D2-A
+Added Pin To Net: NetName=C_2F Pin=D2-K
+Added Pin To Net: NetName=C_2F Pin=D3-A
+Added Pin To Net: NetName=C_3F Pin=D3-K
+Added Pin To Net: NetName=C_3F Pin=D4-A
+Added Pin To Net: NetName=C_4F Pin=D4-K
+Added Pin To Net: NetName=C_4F Pin=D5-A
+Added Pin To Net: NetName=C_5F Pin=D5-K
+Added Pin To Net: NetName=C_5F Pin=D6-A
+Added Pin To Net: NetName=C_6F Pin=D6-K
+Added Pin To Net: NetName=C_6F Pin=D7-A
+Added Pin To Net: NetName=C_7F Pin=D7-K
+Added Pin To Net: NetName=C_7F Pin=D8-A
+Added Pin To Net: NetName=C_8F Pin=D8-K
+Added Pin To Net: NetName=C_8F Pin=D9-A
+Added Pin To Net: NetName=C_9F Pin=D9-K
+Added Pin To Net: NetName=C_9F Pin=D10-A
+Added Pin To Net: NetName=C_10F Pin=D10-K
+Added Pin To Net: NetName=C_10F Pin=D11-A
+Added Pin To Net: NetName=C_11F Pin=D11-K
+Added Pin To Net: NetName=C_11F Pin=D12-A
+Added Pin To Net: NetName=C_12F Pin=D12-K
+Added Member To Class: ClassName=monitoring_board Member=Component D2 PDZ7.5B
+Added Member To Class: ClassName=monitoring_board Member=Component D3 PDZ7.5B
+Added Member To Class: ClassName=monitoring_board Member=Component D4 PDZ7.5B
+Added Member To Class: ClassName=monitoring_board Member=Component D5 PDZ7.5B
+Added Member To Class: ClassName=monitoring_board Member=Component D6 PDZ7.5B
+Added Member To Class: ClassName=monitoring_board Member=Component D7 PDZ7.5B
+Added Member To Class: ClassName=monitoring_board Member=Component D8 PDZ7.5B
+Added Member To Class: ClassName=monitoring_board Member=Component D9 PDZ7.5B
+Added Member To Class: ClassName=monitoring_board Member=Component D10 PDZ7.5B
+Added Member To Class: ClassName=monitoring_board Member=Component D11 PDZ7.5B
+Added Member To Class: ClassName=monitoring_board Member=Component D12 PDZ7.5B

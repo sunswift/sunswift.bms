@@ -1,0 +1,57 @@
+Removed Pin From Net: NetName=C_6F Pin=C7-1
+Removed Pin From Net: NetName=C_0 Pin=P5-14
+Removed Pin From Net: NetName=C_0 Pin=R5-1
+Removed Pin From Net: NetName=C_6F Pin=R7-2
+Removed Pin From Net: NetName=C_6F Pin=U1-15
+Change Component DesignItemId : Designator=D2 Old DesignItemId=PDZ7.5B New DesignItemId=ZENER1
+Change Component DesignItemId : Designator=D3 Old DesignItemId=PDZ7.5B New DesignItemId=ZENER1
+Change Component DesignItemId : Designator=D4 Old DesignItemId=PDZ7.5B New DesignItemId=ZENER1
+Change Component DesignItemId : Designator=D5 Old DesignItemId=PDZ7.5B New DesignItemId=ZENER1
+Change Component DesignItemId : Designator=D6 Old DesignItemId=PDZ7.5B New DesignItemId=ZENER1
+Change Component DesignItemId : Designator=D7 Old DesignItemId=PDZ7.5B New DesignItemId=ZENER1
+Change Component DesignItemId : Designator=D8 Old DesignItemId=PDZ7.5B New DesignItemId=ZENER1
+Change Component DesignItemId : Designator=D9 Old DesignItemId=PDZ7.5B New DesignItemId=ZENER1
+Change Component DesignItemId : Designator=D10 Old DesignItemId=PDZ7.5B New DesignItemId=ZENER1
+Change Component DesignItemId : Designator=D11 Old DesignItemId=PDZ7.5B New DesignItemId=ZENER1
+Change Component Footprint: Designator=D2 Old Footprint=PCBComponent_1 New Footprint=SOD323
+Change Component Footprint: Designator=D3 Old Footprint=PCBComponent_1 New Footprint=SOD323
+Change Component Footprint: Designator=D4 Old Footprint=PCBComponent_1 New Footprint=SOD323
+Change Component Footprint: Designator=D5 Old Footprint=PCBComponent_1 New Footprint=SOD323
+Change Component Footprint: Designator=D6 Old Footprint=PCBComponent_1 New Footprint=SOD323
+Change Component Footprint: Designator=D7 Old Footprint=PCBComponent_1 New Footprint=SOD323
+Change Component Footprint: Designator=D8 Old Footprint=PCBComponent_1 New Footprint=SOD323
+Change Component Footprint: Designator=D9 Old Footprint=PCBComponent_1 New Footprint=SOD323
+Change Component Footprint: Designator=D10 Old Footprint=PCBComponent_1 New Footprint=SOD323
+Change Component Footprint: Designator=D11 Old Footprint=PCBComponent_1 New Footprint=SOD323
+Added Component: Designator=D12(SOD323)
+Added Pin To Net: NetName=C_0 Pin=C5-2
+Added Pin To Net: NetName=C_1F Pin=D2-A
+Added Pin To Net: NetName=C_2F Pin=D2-K
+Added Pin To Net: NetName=C_2F Pin=D3-A
+Added Pin To Net: NetName=C_3F Pin=D3-K
+Added Pin To Net: NetName=C_3F Pin=D4-A
+Added Pin To Net: NetName=C_4F Pin=D4-K
+Added Pin To Net: NetName=C_4F Pin=D5-A
+Added Pin To Net: NetName=C_5F Pin=D5-K
+Added Pin To Net: NetName=C_5F Pin=D6-A
+Added Pin To Net: NetName=C_6F Pin=D6-K
+Added Pin To Net: NetName=C_6F Pin=D7-A
+Added Pin To Net: NetName=C_8F Pin=D8-K
+Added Pin To Net: NetName=C_8F Pin=D9-A
+Added Pin To Net: NetName=C_9F Pin=D9-K
+Added Pin To Net: NetName=C_9F Pin=D10-A
+Added Pin To Net: NetName=C_10F Pin=D10-K
+Added Pin To Net: NetName=C_10F Pin=D11-A
+Added Pin To Net: NetName=C_11F Pin=D11-K
+Added Pin To Net: NetName=C_11F Pin=D12-A
+Added Pin To Net: NetName=C_12F Pin=D12-K
+Added Pin To Net: NetName=C_5 Pin=P5-14
+Added Pin To Net: NetName=C_5 Pin=R5-1
+Added Net: Name=C_5
+Added Pin To Net: NetName=C_7F Pin=C7-1
+Added Pin To Net: NetName=C_7F Pin=D7-K
+Added Pin To Net: NetName=C_7F Pin=D8-A
+Added Pin To Net: NetName=C_7F Pin=R7-2
+Added Pin To Net: NetName=C_7F Pin=U1-15
+Added Net: Name=C_7F
+Added Member To Class: ClassName=monitoring_board Member=Component D12 PDZ7.5B

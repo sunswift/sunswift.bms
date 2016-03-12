@@ -1,0 +1,64 @@
+.PHONY: all program
+
+LINKER = $(ARCH)/linker
+CMSIS = $(ARCH)/cmsis
+STARTUP = $(ARCH)/startup
+CHECKSUM = checksum
+
+# architecture
+MCU = cortex-m3
+UC = LPC11C14/301
+
+# define utilities
+CC = arm-none-eabi-gcc
+AS = arm-none-eabi-as
+LD = arm-none-eabi-ld
+SIZE = arm-none-eabi-size
+OBJCOPY = arm-none-eabi-objcopy
+
+LINKSCRIPT=LPC17xx.ld
+
+OBJECTS += core_cm3.o system_LPC17xx.o
+OBJECTS += i2c.o ssp.o clkpwr.o
+OBJECTS += cr_startup_lpc17.o
+
+CFLAGS += -mcpu=$(MCU) -D__NEWLIB__ -D__USE_CMSIS -D__CODE_RED -mthumb
+CFLAGS += -lm
+
+LSCRIPT = $(LINKER)/$(LINKSCRIPT)
+LDFLAGS  = -Xlinker -Map=$(BUILD)/$(MAIN_NAME).map -Xlinker --gc-sections -L $(LINKER) -T "$(LSCRIPT)"
+
+ASFLAGS = -ahls -mcpu=cortex-m3
+
+all: $(BUILD)/$(MAIN_NAME).hex $(BUILD)/$(MAIN_NAME).bin
+
+$(BUILD)/$(MAIN_NAME).hex: $(BUILD)/$(MAIN_NAME).elf
+	@echo "[OBJCOPY] $@"
+	@$(OBJCOPY) -R .stack -O ihex $< $@
+
+$(BUILD)/$(MAIN_NAME).elf: $(addprefix $(BUILD)/,$(OBJECTS))
+	@echo "[CC] $@"
+	@$(CC) $(LDFLAGS) $(addprefix $(BUILD)/,$(OBJECTS)) -o $@
+
+$(BUILD)/core_cm3.o: $(CMSIS)/core_cm3.c
+	@echo "[CC] $@"
+	@$(CC) $(CFLAGS) -c -o $@ $<
+
+$(BUILD)/cr_startup_lpc17.o: $(STARTUP)/cr_startup_lpc17.s
+	@echo "[AS] $@"
+	@$(AS) $(ASFLAGS) -o $@ $< > $(BUILD)/cr_startup_lpc17.lst
+
+$(BUILD)/$(MAIN_NAME).bin: $(BUILD)/$(MAIN_NAME).elf
+	@echo "[SIZE] $<"
+	@$(SIZE) $<
+	@echo "[OBJCOPY] $@"
+	@$(OBJCOPY) -O binary -j .text -j .data $< $@
+	@echo
+
+program: all
+	@echo "[PROGRAM] $(MAIN_NAME).bin"
+	@sudo openocd -f openocd.cfg \
+				-c "reset halt" \
+				-c "flash write_image erase $(BUILD)/$(MAIN_NAME).bin 0x0 bin" \
+				-c reset \
+				-c shutdown

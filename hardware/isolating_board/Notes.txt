@@ -1,0 +1,13 @@
+ - Isolator,  SI8441BB-D-IS available from digikey
+ - Isolating supply for battery side (3.3v -> unreg 3.3v or unreg 5V + Reg)
+ - Buzzer
+ - 3.3V switcher drawing from Vin
+
+ - Add diode on output of MPPT, avoid conduction in body diode!
+ - New mosfets should exist that are better
+ - disable aux switch if input voltage comes high enough, it has a minimum boost ratio as
+ - Go through sunpower for cutting cells - ask Sam. 
+
+
+Breaker Size: 160 x 90 x 30
+Fuse Size: 130 x 70 x 40
